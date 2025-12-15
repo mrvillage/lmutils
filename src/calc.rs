@@ -151,7 +151,6 @@ pub fn get_r2s(data: MatRef<f64>, outcomes: MatRef<f64>) -> Vec<R2> {
             let mut betas = betas.try_as_col_major().unwrap().as_slice().to_vec();
             if should_disable_predicted() {
                 predicted = Vec::new();
-                betas = Vec::new();
             }
             R2 {
                 r2,
